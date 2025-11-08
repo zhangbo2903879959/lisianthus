@@ -6,7 +6,10 @@ SpringApplication.run(lisiathusStart.class, args);
 }
 `````
 2.controller
+* 在大量返回json的Controller中使用(以后用得比较多)
+* RestController是一个组合注解 它等于 (@Controller+@ResponseBody)
 `````@Restcontroller 
+
 //表示controller类
 
 
@@ -34,6 +37,10 @@ src-
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
     </dependencies>
  <build>
         <plugins>
@@ -56,3 +63,9 @@ src-
         </repository>
     </repositories>
 ``````
+5.application.yml或properties
+推荐yml
+
+
+
+6.themleaf插件 显示web
