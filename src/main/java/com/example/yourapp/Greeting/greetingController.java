@@ -1,6 +1,6 @@
-package com.example.yourapp.controller;
+package com.example.yourapp.Greeting;
 import java.util.concurrent.atomic.AtomicLong;
-import com.example.yourapp.domain.Greeting;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class greetingController {
-//
+//创建静态常量字符串
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
