@@ -8,12 +8,47 @@ SpringApplication.run(lisiathusStart.class, args);
 2.controller
 * 在大量返回json的Controller中使用(以后用得比较多)
 * RestController是一个组合注解 它等于 (@Controller+@ResponseBody)
-`````@Restcontroller 
-
-//表示controller类
-
+`````@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    
+    @GetMapping
+    public List<User> getUsers() {
+        // 获取用户列表
+    }
+    
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Long id) {
+        // 根据ID获取用户
+    }
+    
+    @PostMapping
+    public User createUser(@RequestBody User user) {
+        // 创建用户
+    }
+    
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody User user) {
+        // 更新用户
+    }
+    
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        // 删除用户
+    }
+}
 
 `````
+其他相关注解 javax.validation.constraints
+@NotNull
+@Size
+@Email
+@Min
+@Max
+swagger openai注解
+@ApiOperation
+@ApiParam
+@ApiResponse
 3.目录结构
 src-
     main-

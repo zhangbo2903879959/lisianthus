@@ -32,7 +32,7 @@ git config --global color.ui auto
 git init 创建gitcore文件
 git add process.md 添加md文件
 git commit -m "process" 提交填写备注
-git remote add origin git@github.com:zhangbo2903879959/lisianthus.git 配置远程仓库
+git remote add origin git@github.com:-----.git 配置远程仓库
 git remote -v 查看链接的仓库
 git push -u origin main 推送本地文件到main分支 -f时强制提交
 
